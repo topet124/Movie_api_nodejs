@@ -1,6 +1,125 @@
-App Title : Movie api
-Objective
-To build the server-side component of a “movies” web application. The web
-application will provide users with access to information about different
-movies, directors, and genres. Users will be able to sign up, update their
-personal information, and create a list of their favorite movies.
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title >MY Flix!</title>
+</head>
+<body>
+  <h1>My Flix</h1>
+  <br />
+  <p>
+    This web application will give users with access to information about
+    different movies, directors, and genres. Users will be able to sign up,
+    update their personal information, and create a list of their favorite
+    movies.
+  </p>
+  <table>
+      <tr>
+          <th>Request</th>
+          <th>URL</th>
+          <th>HTTP Method</th>
+          <th>Response</th>
+          <th>Examples</th>
+      </tr>
+      <tr>
+
+      </tr>
+      <tr>
+          <td>Get a list of movies</td>
+          <td>/Movies</td>
+          <td>GET</td>
+          <td>Returns a JSON list of movies.</td>
+          <td> </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+          <td>Get data about a movie from title</td>
+          <td>/movies/:title</td>
+          <td>GET</td>
+          <td>Returns a JSON data about a specific movie.</td>
+          <td>"Genre":<br>
+          "Name": "Tenet",<br>
+          "Description": "Animation is a genre of film that tells stories through moving illustrations."
+          "Director":<br>
+          "Name": "tanako",<br>
+          "Actors": [],<br>
+          "_id": "61bf25c26072c5ac3ad42a4e",<br>
+          "Title": "The Wind Rises",<br>
+          "Description": "A lifelong love of flight inspires Japanese aviation engineer Jiro Horikoshi (Hideaki Anno), whose storied career includes the creation of the A6M World War II fighter plane..",<br>
+          "ImagePath": "thewindrises.png",<br>
+          "Featured": true<br>
+          </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+          <td>Get info about a director</td>
+          <td>/directors/:directorName</td>
+          <td>GET</td>
+          <td>Returns a JSON data about auther year.</td>
+          <td>"Name": "john dlton",<br>
+          "Bio": "john is...",<br>
+          "Birth": "1967",<br>
+          "Death": "Null"<br>  </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+          <td>Return data about a genre by name/title.</td>
+          <td>/genres/:genre</td>
+          <td>GET</td>
+          <td>Returns a JSON data with movies of that ganre.</td>
+          <td>"Name": "Drama", <br>
+          "Description": "In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.."</td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+          <td>Add new user</td>
+          <td>/users/:newUser</td>
+          <td>POST</td>
+          <td>Will post new user to JSON object.</td>
+          <td>"userName: xxxxx", <br>
+          "password": "xxxxxx", <br>
+          "email: xxxxxx", <br>
+      </tr>
+      <tr>
+
+      </tr>
+      <tr>
+          <td>Allow users to update their user information</td>
+          <td>/users/:Username</td>
+          <td>PUT</td>
+          <td>Returns the data fields  by the user.</td>
+          <td>userName: NewName, <br>
+          password: Newpassword, <br>
+      </tr>
+      <tr>
+          <td>Delete the user</td>
+          <td>/users/:deleteUser</td>
+          <td>DELETE</td>
+          <td>Return confirmation that the user was deleted.</td>
+          <td> Enter usersName</td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+          <td>Add new movie to list of favorite</td>
+          <td>/users/:userName/movies/:title</td>
+          <td>POST</td>
+          <td>Returns a text confirming which movie was added successfully.</td>
+
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+          <td>Delete movie from list of favorite</td>
+          <td>/users/:userName/movies/:title</td>
+          <td>DELETE</td>
+          <td>Returns a text confirming which movie was removed successfully.</td>
+
+      </tr>
+  </table>
+</body>
+</html>
