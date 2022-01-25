@@ -219,7 +219,7 @@ app.post("/users", (req, res) => {
 });
 
 //Allow users to update their movie list
-app.post("/users/:id/:movieTitle", (req, res) => {
+app.put("/users/:id/favoritemovies/:movieTitle", (req, res) => {
   const { id, movieTitle } = req.params;
 
   let user = users.find((user) => user.id == id);
@@ -232,7 +232,7 @@ app.post("/users/:id/:movieTitle", (req, res) => {
   }
 });
 
-//Allow users to add a movie to their username
+//Allow users to change their username
 app.put("/users/:id", (req, res) => {
   const { id } = req.params;
   const updatedUser = req.body;
