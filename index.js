@@ -179,7 +179,7 @@ app.get("/movies/:title", (req, res) => {
 });
 
 //Return data about a genre description by genre name
-app.get("/movies/genre/:genreName", (req, res) => {
+app.get("/genre/:genreName", (req, res) => {
   const { genreName } = req.params;
   const genre = movies.find((movie) => movie.Genre.Name === genreName).Genre;
 
@@ -191,7 +191,7 @@ app.get("/movies/genre/:genreName", (req, res) => {
 });
 
 //Return data about a director by name
-app.get("/movies/directors/:directorName", (req, res) => {
+app.get("/directors/:directorName", (req, res) => {
   const { directorName } = req.params;
   const director = movies.find(
     (movie) => movie.Director.Name === directorName
@@ -249,7 +249,7 @@ app.put("/users/:id", (req, res) => {
 
 //Allow users to remove a movie from their list of favorites
 
-app.delete("/users/:id/:movieTitle", (req, res) => {
+app.delete("/users/:id/favoritemovies/:movieTitle", (req, res) => {
   const { id, movieTitle } = req.params;
 
   let user = users.find((user) => user.id == id);
@@ -262,7 +262,7 @@ app.delete("/users/:id/:movieTitle", (req, res) => {
   }
 });
 
-//Allow users to deregister from the list
+//Allow users to deregister from the list by ID
 
 app.delete("/users/:id/", (req, res) => {
   const {id} = req.params;
