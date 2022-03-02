@@ -10,8 +10,10 @@ const Movies = Models.Movie;
 const Users = Models.User;
 
 // allows Mongoose to connect to database myFlixDB
-mongoose.connect('mongodb+srv://topet124:London123@cluster0.zbdlr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
+//mongoose.connect('mongodb+srv://topet124:London123@cluster0.zbdlr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
+
+mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 const app = express();
 const cors = require('cors');
 app.use(cors());
